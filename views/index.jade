@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	if posts
+		each post, i in posts
+			.post
+				h1
+					a(href='/posts/show/#{post._id}')
+						=post.title
+				p.meta Posted in 
+					a(href='/categories/show/#{post.category}') #{post.category} by #{post.author} on #{post.date}
+				!=truncateText(post.body,200)
+				br
+				br
+				a.more(href='/posts/show/#{post._id}') Read More
+	else
+		p.noposts There are no posts to display
