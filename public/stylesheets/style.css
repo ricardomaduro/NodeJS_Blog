@@ -14,9 +14,9 @@ body {
 
 .container {
 	width:750px;
-	border:1px solid #ccc;
+	/*border:1px solid #ccc;*/
 	margin:20px auto;
-	border:black 1px solid;
+	/*border:black 1px solid;*/
 }
 
 .clr {
